@@ -60,7 +60,12 @@ If you haven't configured the author name and email address to be used with your
 ### Connect to a remote repository
 **If you haven't connected your local repository to a remote server, add the server to be able to push to it:**
 
-`git remote add origin <server>`
+`git remote add origin <remote_repo_url>`
+`git push --all origin`
+
+To set this as the default origin, you can do: 
+
+`git push --all --set-upstream origin`
 
 **List all currently configured remote repositories:**	
 
@@ -158,6 +163,8 @@ If you haven't configured the author name and email address to be used with your
 **Search the working directory for foo():**
 
 `git grep "foo()"`
+
+### Useful Information
 
 
 Credits:
