@@ -3,8 +3,12 @@ This repository is meant to help guide you in using the basic Git commands while
 
 ## Getting Started
 
-If you haven't configured the author name and email address to be used with your commits, you can do so with the following comands
-.
+**Download the following:**
+- [Git](https://git-scm.com/downloads "Git Download")
+- [Github Desktop](https://desktop.github.com/ "GitHub Destop Download")
+
+If you haven't configured the author name and email address to be used with your commits, you can do so with the following comands.
+
 **Note** Git strips some characters (for example trailing periods) from user.name.
 
 `git config --global user.name "Sam Smith"`
