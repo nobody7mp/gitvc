@@ -158,16 +158,91 @@ To set this as the default origin, you can do:
 `git fetch origin`
 `git reset --hard origin/master`
 
+### Stashing
+Stashing takes the dirty state of your working directory — that is, your modified tracked files and staged changes — and saves it on a stack of unfinished changes that you can reapply at any time.
+
+**To stash changes**
+
+`git stash`
+
+**To see everything in stash**
+
+`git stash list`
+
+**To apply stashed changes**
+
+`git stash apply`
+
+**To show stashed item**
+
+`git stash show`
+
+**To apply an older stashed item**
+
+`git stash apply stash@{2}`
+
+**Remove a single stashed state from the stash list and apply it on top of the current working tree state**
+
+`git stash pop`
+
 ### Search
 
 **Search the working directory for foo():**
 
 `git grep "foo()"`
 
+### Deleting Commits
+
+**Delete a commit locally**
+
+Example: 
+`git log --pretty=oneline --abbrev-commit`
+`46cd867 Changed with mistake`
+`d9f1cf5 Changed again`
+`105fd3d Changed content`
+`df33c8a First commit`
+
+Commit 46cd867 is the most recent commit and the one we want to delete, for doing that, we will use rebase.
+
+`git rebase -i HEAD~2`
+
+That command will open your default text editor with your two (Change the number 2 with the number of commits you want to get) latest commits:
+
+`pick d9f1cf5 Changed again`
+`pick 46cd867 Changed with mistake`
+`                                `
+`# Rebase 105fd3d..46cd867 onto 105fd3d`
+`#`
+`# Commands:`
+`#  p, pick = use commit`
+`#  r, reword = use commit, but edit the commit message`
+`#  e, edit = use commit, but sto...`
+
+We just need to delete the line that corresponds to the commit we want to delete and save the file.
+
+Check to see that the change was applied correctly:
+
+`$git log --pretty=oneline --abbrev-commit`
+`d9f1cf5 Changed again`
+`105fd3d Changed content`
+`df33c8a First commit`
+
+**Delete a remote commit**
+To remove a commit you already pushed to your origin or to another remote repository you have to first delete it locally like in the previous step and then push your changes to the remote.
+
+`git push origin +master`
+
+Notice the + sign before the name of the branch you are pushing, this tells git to force the push. It is worth to mention that you should be very careful when deleting commits because once you do it they are gone forever. Also, if you are deleting something from a remote repository make sure you coordinate with your team to prevent issues.
+
 ### Useful Information
 
 **Basic Flow**
-![](https://raw.githubusercontent.com/inland-empire-software-development/gitvc/master/images/basic-flow.png)
+![Basic Flow](https://raw.githubusercontent.com/inland-empire-software-development/gitvc/master/images/basic-flow.png)
+
+
+**Commit Referencing**
+![Commit Referencing](https://raw.githubusercontent.com/inland-empire-software-development/gitvc/master/images/commit-referencing.svg)
 
 Credits:
 [List of basic commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html "List of basic commands") - Atlassian 
+[Deleting a Commit](https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/ "Deleting a Commit") - Ncona
