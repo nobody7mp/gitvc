@@ -15,7 +15,7 @@ If you haven't configured the author name and email address to be used with your
 
 `git init`
 
-### Check out a repository
+### **Check out a repository**
 
 **Create a working copy of a local repository:**
 
@@ -25,7 +25,7 @@ If you haven't configured the author name and email address to be used with your
 
 `git clone username@host:/path/to/repository`
 
-### Add files
+### **Add files**
 **Add one or more files to staging (index):**
 
 `git add <filename>`
@@ -34,7 +34,7 @@ If you haven't configured the author name and email address to be used with your
 
 `git add .`
 
-### Commit	
+### **Commit	**
 **Commit changes to head (but not yet to the remote repository):**
 
 `git commit -m "Commit message"`
@@ -43,17 +43,17 @@ If you haven't configured the author name and email address to be used with your
 
 `git commit -a`
 
-### Push
+### **Push**
 **Send changes to the master branch of your remote repository:**
 
 `git push origin master`
 
-### Status
+### **Status**
 **List the files you've changed and those you still need to add or commit:**
 
 `git status`
 
-### Connect to a remote repository
+### **Connect to a remote repository**
 **If you haven't connected your local repository to a remote server, add the server to be able to push to it:**
 
 `git remote add origin <server>`
@@ -62,7 +62,7 @@ If you haven't configured the author name and email address to be used with your
 
 `git remote -v`
 
-### Branches
+### **Branches**
 **Create a new branch and switch to it:**
 
 `git checkout -b <branchname>`
@@ -90,12 +90,12 @@ If you haven't configured the author name and email address to be used with your
 **Delete a branch on your remote repository:**
 `git push origin :<branchname>`
 
-### Update from the remote repository
+### **Update from the remote repository**
 **Fetch and merge changes on the remote server to your working directory:**
 
 `git pull`
 
-### Merging
+### **Merging**
 **To merge a different branch into your active branch:**
 
 `git merge <branchname>`
@@ -116,7 +116,7 @@ If you haven't configured the author name and email address to be used with your
 
 `git add <filename>`
 
-### Tags 
+### **Tags **
 **You can use tagging to mark a significant changeset, such as a release:**
 
 `git tag 1.0.0 <commitID>`
@@ -125,7 +125,7 @@ If you haven't configured the author name and email address to be used with your
 
 `git push --tags origin`
 
-### Logging
+### **Logging**
 **CommitId is the leading characters of the changeset ID, up to 10, but must be unique. Get the ID using:**
 
 `git log`
@@ -139,7 +139,7 @@ If you haven't configured the author name and email address to be used with your
 `git log --graph`
 
 
-### Undo local changes
+### **Undo local changes**
 **This will checkout the file from HEAD, overwriting your change:**
 
 `git checkout -- <filename>`
@@ -149,7 +149,7 @@ If you haven't configured the author name and email address to be used with your
 `git fetch origin`
 `git reset --hard origin/master`
 
-### Search
+### **Search**
 
 **Search the working directory for foo():**
 
