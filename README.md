@@ -166,6 +166,8 @@ To set this as the default origin, you can do:
 
 ### Useful Information
 
+**Basic Flow**
+![](https://raw.githubusercontent.com/inland-empire-software-development/gitvc/master/images/basic-flow.png)
 
 Credits:
 [List of basic commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html "List of basic commands") - Atlassian 
